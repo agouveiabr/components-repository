@@ -30,6 +30,10 @@ jobs:
         run: npm ci
       - name: Build
         run: npm run build
+      - name: Debug build output
+        run: |
+          echo "Contents of dist directory:"
+          ls -R dist
       - name: Setup Pages
         uses: actions/configure-pages@v5
       - name: Upload artifact
